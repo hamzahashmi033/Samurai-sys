@@ -43,7 +43,7 @@ const Hero = () => {
   return (
     <div className="bg-Black">
       <Nav />
-      <div className="max-w-[1728px] xs:w-[100vw] relative mx-auto ">
+      <div className="max-w-[1728px] pb-4 xs:w-[100vw] relative mx-auto ">
         <div className="2xl:max-w-[1526px] w-[85vw] lg:pt-32 xs:pt-20 2xl:pt-28 mx-auto">
           <Grid container spacing={2}>
             <Grid xs={12} sx={{ marginBottom: "16px" }}>
