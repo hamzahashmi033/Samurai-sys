@@ -1,0 +1,8 @@
+/* tailwind.base.css */
+@tailwind base;
+
+/* tailwind.components.css */
+@tailwind components;
+
+/* tailwind.utilities.css */
+@tailwind utilities;
