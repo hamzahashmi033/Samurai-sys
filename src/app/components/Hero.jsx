@@ -43,7 +43,7 @@ const Hero = () => {
   return (
     <div className="bg-Black">
       <Nav />
-      <div className="max-w-[1728px] pb-4 xs:w-[100vw] relative mx-auto ">
+      <div className="max-w-[1728px]  xs:w-[100vw] relative mx-auto ">
         <div className="2xl:max-w-[1526px] w-[85vw] lg:pt-32 xs:pt-20 2xl:pt-28 mx-auto">
           <Grid container spacing={2}>
             <Grid xs={12} sx={{ marginBottom: "16px" }}>
@@ -100,7 +100,7 @@ const Hero = () => {
                 "linear-gradient(271.18deg, rgba(58, 58, 58, 0) -4.85%, #3a3a3a 147.42%)",
               borderImageSlice: "1",
             }}
-            className="text-white px-[16px] py-[30px] mt-20"
+            className="text-white px-[16px] py-[30px] mt-0"
           >
             <Grid container spacing={2}>
               <Grid xs={6} sm={3} sx={{ paddingX: "8px", paddingY: "10px" }}>
@@ -136,83 +136,6 @@ const Hero = () => {
 
           <div className="absolute top-0 right-0">
             <Image src={"/Isolation_Mode.png"} width={800} height={100} />
-          </div>
-        </div>
-        <div
-          style={{
-            background:
-              "linear-gradient(180deg, rgba(24, 24, 21, 0.25) 0%, rgba(24, 24, 21, 0.25) 100%)",
-          }}
-          className="2xl:max-w-[1526px] w-[85vw] mt-24 border border-[#3A3A3A] rounded-2xl h-auto xs:py-[28px] xs:px-[10px] sm:px-[20px]   lg:py-[78px] lg:px-[68px] mx-auto"
-        >
-          <div className="flex gap-4 xs:justify-center lg:justify-start items-center">
-            <Image
-              src={"/Line4.svg"}
-              width={129}
-              height={100}
-              className="xl:w-[100px] xs:w-[40px] 2xl:w-[129px]"
-            />
-            <p className="2xl:text-[20px] xs:text-[10px] xl:text-[16px] font-[300] text-White leading-[19px]">
-              WHAT SETS US APART?
-            </p>
-          </div>
-          <div className="text-White flex xs:flex-col sm:flex-row lg:justify-between xs:items-center lg:items-start xs:justify-center ">
-            <div>
-              {" "}
-              <h2 className="2xl:text-[40px] xl:text-[32px] xs:text-[24px] sm:text-[28px] font-[400] 2xl:leading-[44px] 2xl:mt-[31px] xs:text-center sm:text-left">
-                <span className="text-Red">Bridging The Gap</span> Between
-              </h2>
-              <p className="2xl:text-[40px] xl:text-[32px] xs:text-[24px] sm:text-[28px] text-center 2xl:leading-[44px] font-[500] mt-[6px] lg:text-left">
-                you and your audience
-              </p>
-            </div>
-
-            <p className="2xl:text-[16px]  lg:text-[14px] hidden lg:block mt-4 text-left">
-              We not only deliver high quality enterprise solutions but also
-              provide
-              <br /> seamless integration with back office system and mobile
-              interface
-              <br /> as a single stack.
-            </p>
-          </div>
-          <div className="flex xs:flex-col   sm:flex-row  lg:mt-10 justify-between xs:ml-20 lg:ml-10 py-10 px-6  ">
-            {Icons.map((icon) => (
-              <div className="relative mt-20 md:w-[20%] mx-auto ">
-                <p className="text-[#252525] top-[-53px] left-[-80px] text-[86px] font-[800] absolute z-10">
-                  {icon.Num}
-                </p>
-                <p className="text-white  z-50 font-[600] xs:text-[12px] text-[16px] relative">
-                  {icon.Title}
-                </p>
-                <p className="text-White  text-[14px] font-[300] hidden lg:block mt-10">
-                  {" "}
-                  {icon.Description}
-                </p>
-              </div>
-            ))}
-          </div>
-          <div className="gap-4 w-full flex flex-wrap sm:flex-nowrap justify-center">
-            {Img.map((img, index) => (
-              <div
-                key={index}
-                style={{}}
-                className="bg-[#1D1D1D]  h-[84px] flex justify-center w-[45%] sm:w-full   items-center   rounded-lg  "
-              >
-                <Image
-                  src={img.path}
-                  width={110}
-                  height={20}
-                  className="object-contain  "
-                  alt="description"
-                />
-              </div>
-            ))}
-          </div>
-          <div className="text-White xs:mt-4 sm:mt-10 xs:text-[14px] font-[400] text-center">
-            <p>
-              2.6k Companies & Individuals{" "}
-              <span className="font-[600]">Trusted Us</span>
-            </p>
           </div>
         </div>
       </div>

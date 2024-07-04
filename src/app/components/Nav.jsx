@@ -30,7 +30,7 @@ const Nav = () => {
         <div className="flex items-center justify-between p-7">
           <div className="cursor-pointer">
             <a href="/">
-              <Image src={"/nav_logo.png"} width={100} height={100} />
+              <Image src={"/nav_logo.png"} width={200} height={200} />
             </a>
           </div>
           <div className="flex items-center lg:hidden">
@@ -46,7 +46,7 @@ const Nav = () => {
           </div>
           <ul className="hidden lg:flex gap-5">
             <li
-              className="relative cursor-pointer flex items-center"
+              className="relative text-xl cursor-pointer flex items-center"
               onClick={() => toggleDropdown("it")}
             >
               IT Infrastructure <RiArrowDropDownLine />
@@ -59,7 +59,7 @@ const Nav = () => {
               )}
             </li>
             <li
-              className="relative cursor-pointer flex items-center"
+              className="relative cursor-pointer text-xl flex items-center"
               onClick={() => toggleDropdown("cyber")}
             >
               Cybersecurity <RiArrowDropDownLine />
@@ -72,7 +72,7 @@ const Nav = () => {
               )}
             </li>
             <li
-              className="relative cursor-pointer flex items-center"
+              className="relative text-xl cursor-pointer flex items-center"
               onClick={() => toggleDropdown("digital")}
             >
               Digital Transformation <RiArrowDropDownLine />
@@ -85,7 +85,7 @@ const Nav = () => {
               )}
             </li>
             <li
-              className="relative cursor-pointer flex items-center"
+              className="relative cursor-pointer text-xl flex items-center"
               onClick={() => toggleDropdown("about")}
             >
               About Us <RiArrowDropDownLine />
@@ -100,17 +100,17 @@ const Nav = () => {
           </ul>
           <ul className="hidden lg:flex items-center gap-5">
             <div className="flex items-center">
-              <div className="border  border-white w-[60px] h-px flex-grow ml-2 hidden sm:block md:hidden xl:block" />
+              <div className="border  border-white w-[80px] h-px flex-grow ml-2 hidden sm:block md:hidden xl:block" />
               <li className="cursor-pointer ml-3">
-                <FaFacebookF />
+                <FaFacebookF size={25}/>
               </li>
               <li className="cursor-pointer text-red-500 mx-3">
-                <FaLinkedinIn />
+                <FaLinkedinIn size={25} />
               </li>
               <li className="cursor-pointer mr-3">
-                <FaTwitter />
+                <FaTwitter size={25} />
               </li>
-              <div className="border border-white w-[60px] h-px flex-grow ml-2 hidden sm:block md:hidden xl:block" />
+              <div className="border border-white w-[80px] h-px flex-grow ml-2 hidden sm:block md:hidden xl:block" />
             </div>
           </ul>
           <button

@@ -11,16 +11,16 @@ import { PartnerImages } from "../utils/Client.constants";
 export default function Client() {
   return (
     <div className="bg-Black">
-      <div className="2xl:max-w-[1728px] sm:w-[100vw] pb-6   mx-auto  bg-Black">
+      <div className="2xl:max-w-[1728px] sm:w-[100vw]  mx-auto  bg-Black">
         <div className="2xl:max-w-[1526px] w-[85vw]   mx-auto">
-          <div className="  py-10 text-White xs:mb-4 sm:mb-12">
-            <h2 className="font-[300] xs:text-[36px] sm:text-[45px]   2xl:text-[66.66px] xs:text-center sm:text-end ">
+          <div className="py-10 text-White xs:mb-4 sm:mb-12">
+            <h2 className="font-[300] xs:text-[36px] sm:text-[45px] md:text[40px]   2xl:text-[66.66px] xs:text-center sm:text-end ">
               Excellence <br />
               <span className="font-[500] xs:text-[38px] sm:text-[44px] 2xl:text-[109px]  ">
                 and Innovations
               </span>{" "}
               <br />{" "}
-              <span className="font-[400] xs:text-[32px] sm:text-[42px] 2xl:text-[103px] text-Red">
+              <span className="font-[400] xs:text-[32px] sm:text-[42px] md:text-[36] 2xl:text-[103px] text-Red">
                 Shaping Tomorrow
               </span>
             </h2>
