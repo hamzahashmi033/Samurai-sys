@@ -1,3 +1,4 @@
+import Client from "./components/Client";
 import Hero from "./components/Hero";
 import Nav from "./components/Nav";
 
