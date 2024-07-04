@@ -7,6 +7,7 @@ export default function Home() {
     <div>
       {/* <Nav /> */}
       <Hero />
+      <Client />
     </div>
   );
 }
