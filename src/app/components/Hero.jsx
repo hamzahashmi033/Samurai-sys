@@ -41,7 +41,7 @@ const Icons = [
 ];
 const Hero = () => {
   return (
-    <div className="bg-Black pb-12 overflow-x-hidden">
+    <div className="bg-Black pb-16 overflow-x-hidden">
       <Nav />
       <div className="max-w-[1728px] relative overflow-x-hidden max-h-[95vh] overflow-y-hidden  xs:w-[100vw]  mx-auto ">
         <div className="2xl:max-w-[1526px]  w-[85vw] xs:mt-4 sm:mt-8  mx-auto">

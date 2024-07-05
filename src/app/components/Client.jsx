@@ -7,16 +7,16 @@ import Image from "next/image";
 
 import PartnerIcon from "./PartnerIcon";
 import { PartnerImages } from "../utils/Client.constants";
-
+export const revalidate = 0
 export default function Client() {
   return (
     <div className="bg-Black overflow-x-hidden pb-8">
       <div className="2xl:max-w-[1728px] sm:w-[100vw] mx-auto bg-Black">
         <div className="2xl:max-w-[1526px] w-[85vw]   mx-auto">
           <div className="py-10 text-White xs:mb-4 mb-0">
-            <h2 className="font-[300] xs:text-[36px] xl:text-[12px] sm:text-[45px] md:text[20px]   2xl:text-[48.66px] xs:text-center sm:text-end ">
+            <h2 className="font-[300] xs:text-[36px] xl:text-[32px] sm:text-[45px] md:text[36px]   2xl:text-[48.66px] xs:text-center sm:text-end ">
               Excellence <br />
-              <span className="font-[500] xs:text-[38px] sm:text-[30px]  2xl:text-[60px]  ">
+              <span className="font-[500] xs:text-[38px] sm:text-[30px] 2xl:text-[60px]  ">
                 and Innovations
               </span>{" "}
               <br />{" "}
