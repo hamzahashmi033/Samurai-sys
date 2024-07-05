@@ -4,7 +4,7 @@ import { dataSolutions } from "../utils/Solutions.constants";
 const Solutions = () => {
   return (
     <div className="bg-White">
-      <div className="2xl:max-w-[1728px] sm:w-[100vw] py-10 mx-auto">
+      <div className="2xl:max-w-[1728px] sm:w-[100vw] lg:w-[70vw] py-10 mx-auto">
         <div className="2xl:max-w-[1526px] h-[524px] w-[85vw] mx-auto">
           <div className="flex xs:flex-col-reverse sm:flex-row mx-auto xs:w-[85vw] py-8">
             <div className="sm:max-w-[40vw] mx-8 2xl:max-w-[30vw] xs:mt-8 sm:mt-0 2xl:max-h-[40vh] xs:max-w-[85vw] sm:max-h-[80vh] xs:max-h-[50vh] overflow-y-auto scrollbar-hide">

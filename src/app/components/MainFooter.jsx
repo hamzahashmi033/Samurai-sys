@@ -10,7 +10,7 @@ import MidFooter from './MidFooter';
 const MainFooter = () => {
   return (
     <>
-      <div className="flex flex-col mt-4 justify-center items-center h-[100vh]">
+      <div className="flex flex-col mt-28 justify-center overflow-x-hidden items-center max-h-[100vh]">
         <PreFooter
           p1="Elevate you Presents"
           span1="Ready TO"

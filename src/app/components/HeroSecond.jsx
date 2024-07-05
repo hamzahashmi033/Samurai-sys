@@ -39,14 +39,14 @@ const Icons = [
 ];
 const HeroSecond = () => {
     return (
-        <div className="bg-black">
+        <div className="bg-black  max-h-[100vh]  overflow-y-hidden overflow-x-hidden">
 
             <div
                 style={{
                     background:
                         "linear-gradient(180deg, rgba(24, 24, 21, 0.25) 0%, rgba(24, 24, 21, 0.25) 100%)",
                 }}
-                className="2xl:max-w-[1526px] w-[85vw] border border-[#3A3A3A] rounded-2xl h-auto xs:py-[28px] xs:px-[10px] sm:px-[20px] lg:py-[78px] lg:px-[68px] mx-auto"
+                className="2xl:max-w-[1526px] w-[85vw] border border-[#3A3A3A] rounded-2xl h-auto xs:py-[0px] xs:px-[10px] sm:px-[20px] lg:py-[36px] lg:px-[68px] mx-auto"
             >
                 <div className="flex gap-4 xs:justify-center lg:justify-start items-center">
                     <Image
@@ -78,10 +78,10 @@ const HeroSecond = () => {
                         <br /> as a single stack.
                     </p>
                 </div>
-                <div className="flex xs:flex-col   sm:flex-row  lg:mt-10 justify-between xs:ml-20 lg:ml-10 py-10 px-6  ">
+                <div className="flex xs:flex-col   sm:flex-row  lg:mt-4 sm:justify-between xs:ml-20 lg:ml-10 xs:py-0 sm:py-6 px-6  ">
                     {Icons.map((icon) => (
                         <div className="relative mt-20 md:w-[20%] mx-auto ">
-                            <p className="text-[#252525] top-[-53px] left-[-80px] text-[86px] font-[800] absolute z-10">
+                            <p className="text-[#252525] top-[-53px] left-[-80px] xs:text-[48px] 2xl:text-[86px] font-[800] absolute z-10">
                                 {icon.Num}
                             </p>
                             <p className="text-white  z-50 font-[600] xs:text-[12px] text-[16px] relative">

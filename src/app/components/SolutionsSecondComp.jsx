@@ -40,7 +40,7 @@ const listData = [
 
 const SolutionsSecondComp = () => {
   return (
-    <div className="  2xl:mb-[200px] lg:mb-[270px] md:mb-[100px]">
+    <div className="  2xl:mb-[200px] max-h-[100vh] lg:mb-[270px] md:mb-[100px]">
       <div className=" 2xl:w-[1728px] h-[100vh] pt-4 lg:mb-10   sm:w-[100vw]   mx-auto ">
         <div className="2xl:w-[1528px] mt-6 px-1     w-[85vw]  lg:shadow-xl mx-auto">
           <div className="flex gap-2 justify-center   items-center">

@@ -6,7 +6,7 @@ import { FaFacebookF, FaLinkedinIn, FaInstagram, FaTwitter } from "react-icons/f
 const MidFooter = () => {
   return (
     <>
-      <div className="p-6"> {/* Add padding to the main container */}
+      <div className="p-6 overflow-x-hidden"> {/* Add padding to the main container */}
         <div className='flex flex-col lg:flex-row justify-between items-center'>
           <div className="w-full lg:w-[625px] mb-6 lg:mb-0 text-center justify-center lg:text-left">
             <Image src={'/footer_logo.png'} width={100} height={100} className='mx-auto lg:mx-0 w-[140px]' />

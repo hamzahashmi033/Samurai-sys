@@ -41,10 +41,10 @@ const Icons = [
 ];
 const Hero = () => {
   return (
-    <div className="bg-Black">
+    <div className="bg-Black pb-12 overflow-x-hidden">
       <Nav />
-      <div className="max-w-[1728px]  xs:w-[100vw] relative mx-auto ">
-        <div className="2xl:max-w-[1526px] w-[85vw] lg:pt-32 xs:pt-20 2xl:pt-28 mx-auto">
+      <div className="max-w-[1728px] relative overflow-x-hidden max-h-[95vh] overflow-y-hidden  xs:w-[100vw]  mx-auto ">
+        <div className="2xl:max-w-[1526px]  w-[85vw] xs:mt-4 sm:mt-8  mx-auto">
           <Grid container spacing={2}>
             <Grid xs={12} sx={{ marginBottom: "16px" }}>
               <h1 className="text-white mb-12">
@@ -77,11 +77,23 @@ const Hero = () => {
                   “deliver the best, nothing else”
                 </span>
               </p>
+              <div className="absolute top-0 right-0">
+                <Image
+                  src={"/Isolation_Mode.png"}
+                  width={800}
+                  height={100}
+                  className="2xl:max-w-[500px] lg:max-w-[450px] xs:max-w-[300px]"
+                />
+              </div>
             </Grid>
           </Grid>
 
           <Grid container spacing={2}>
-            <Grid xs={6} sm={2}>
+            <Grid
+              xs={6}
+              sm={2}
+              sx={{ marginBottom: { xs:"1rem", sm: "2rem" } }}
+            >
               <button className="bg-Red text-white xs:px-[16px] xs:py-[2px] xl:px-[32px] xl:py-[6px] 2xl:py-[10px] 2xl:px-[41px]">
                 Get a Quote
               </button>
@@ -99,32 +111,33 @@ const Hero = () => {
               borderImageSource:
                 "linear-gradient(271.18deg, rgba(58, 58, 58, 0) -4.85%, #3a3a3a 147.42%)",
               borderImageSlice: "1",
+              
             }}
-            className="text-white px-[16px] py-[30px] mt-0"
+            className="text-white 2xl:px-[16px] xs:text-[12px]  sm:text-[16px]  mt-0 "
           >
             <Grid container spacing={2}>
-              <Grid xs={6} sm={3} sx={{ paddingX: "8px", paddingY: "10px" }}>
+              <Grid xs={3} sm={3}>
                 <p className="font-[300]">
                   <span className="text-Red font-[600]">2000+</span>
                   <br />
                   Projects
                 </p>
               </Grid>
-              <Grid xs={6} sm={3} sx={{ paddingX: "8px", paddingY: "10px" }}>
+              <Grid xs={3} sm={3}>
                 <p className="font-[300]">
                   <span className="text-Red font-[600]">100+</span>
                   <br />
                   Clients
                 </p>
               </Grid>
-              <Grid xs={6} sm={3} sx={{ paddingX: "8px", paddingY: "10px" }}>
+              <Grid xs={3} sm={3}>
                 <p className="font-[300]">
                   <span className="text-Red font-[600]">22+ Year</span>
                   <br />
                   of Experience
                 </p>
               </Grid>
-              <Grid xs={6} sm={3} sx={{ paddingX: "8px", paddingY: "10px" }}>
+              <Grid xs={3} sm={3}>
                 <p className="font-[300]">
                   <span className="text-Red font-[600]">2000+</span>
                   <br />
@@ -133,10 +146,7 @@ const Hero = () => {
               </Grid>
             </Grid>
           </div>
-
-          <div className="absolute top-0 right-0">
-            <Image src={"/Isolation_Mode.png"} width={800} height={100} />
-          </div>
+       
         </div>
       </div>
     </div>
