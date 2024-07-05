@@ -27,7 +27,7 @@ const Nav = () => {
   return (
     <>
       <nav className="2xl:max-w-[1728px] mx-auto text-white">
-        <div className="flex items-center justify-between p-7">
+        <div className="flex items-center justify-between p-4">
           <div className="cursor-pointer">
             <a href="/">
               <Image src={"/nav_logo.png"} width={200} height={200} />
@@ -36,7 +36,7 @@ const Nav = () => {
           <div className="flex items-center lg:hidden">
             <button
               type="button"
-              className="text-white bg-[#C92127] p-3 rounded lg:hidden"
+              className="text-white bg-[#C92127] p-1 rounded lg:hidden"
             >
               Get A Quote
             </button>

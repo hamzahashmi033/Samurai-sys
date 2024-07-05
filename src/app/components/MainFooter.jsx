@@ -6,10 +6,11 @@ import PreFooter from './PreFooter'
 import Image from 'next/image'
 
 import { FaFacebookF, FaLinkedinIn, FaInstagram, FaTwitter } from "react-icons/fa";
+import MidFooter from './MidFooter';
 const MainFooter = () => {
   return (
     <>
-      <div className="flex flex-col justify-center items-center h-[100vh]">
+      <div className="flex flex-col mt-4 justify-center items-center h-[100vh]">
         <PreFooter
           p1="Elevate you Presents"
           span1="Ready TO"
