@@ -7,6 +7,7 @@ import Solutions from "./components/SolutionsScroll";
 import MainFooter from "./components/MainFooter";
 import SolutionsSecondComp from "./components/SolutionsSecondComp";
 import "@/app/utils/page.css";
+import gsap from "gsap";
 
 export default function Home() {
   useEffect(() => {
@@ -15,119 +16,68 @@ export default function Home() {
     gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
     let panels = gsap.utils.toArray(".panel");
-    let observer = ScrollTrigger.normalizeScroll(true);
     let scrollTween;
-
-    const handleTouchStart = (e) => {
-      if (scrollTween) {
-        e.preventDefault();
-        e.stopImmediatePropagation();
-      }
-    };
-
-    document.addEventListener("touchstart", handleTouchStart, {
-      capture: true,
-      passive: false,
-    });
 
     function goToSection(i) {
       scrollTween = gsap.to(window, {
-        scrollTo: { y: i * innerHeight, autoKill: false },
-        onStart: () => {
-          observer.disable();
-          observer.enable();
-        },
-        duration: 1,
+        scrollTo: { y: i * innerHeight, autoKill: true },
+        duration: 1.2,
         onComplete: () => (scrollTween = null),
-        overwrite: true,
+        overwrite: "auto",
+        immediateRender: false,
       });
     }
 
     panels.forEach((panel, i) => {
       ScrollTrigger.create({
         trigger: panel,
-        start: "top bottom",
-        end: "+=199%",
+        start: "top bottom", // Change this to trigger in the middle of the viewport
+        end: "bottom",
         onToggle: (self) => self.isActive && !scrollTween && goToSection(i),
+        toggleActions: "play none none reverse",
+        markers: true,
+        scroller: "body"
       });
     });
 
     ScrollTrigger.create({
       start: 0,
       end: "max",
-      snap: 1 / (panels.length - 1),
+      snap: {
+        snapTo: 1 / (panels.length - 1),
+        duration: 1.2,
+        ease: "power2.inOut",
+        delay: 0.1,
+      },
     });
 
     return () => {
-      document.removeEventListener("touchstart", handleTouchStart);
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
   }, []);
 
   return (
     <>
-      <section className="panel first">
-        <Hero />
-      </section>
-      <section className="panel second">
-        <HeroSecond />
-      </section>
-      <section className="panel third">
-        <Solutions />
-      </section>
-
-      <section className="panel fourth">
-        <Client />
-      </section>
-      <section className="panel fifth">
-        <MainFooter />
-      </section>
-      {/* <section className="panel third">
-        <Hero />
-      </section>
-      <section className="panel fourth">
-        <Hero />
-      </section>
-      <section className="panel fifth">
-        <Hero />
-      </section>
-      <section className="panel sixth">
-        <Hero />
-      </section>
-      <section className="panel seventh">
-        <Hero />
-      </section>
-      <section className="panel eigth">
-        <Hero />
-      </section> */}
-
-      {/* <section className="panel third"> */}
-      {/* <Solutions /> */}
-      {/* </section> */}
-      {/* <section className="panel fourth">
-        <SolutionsSecondComp />
-      </section> */}
-      {/* <section className="panel fifth">
-        <Client />
-      </section>
-      <section className="panel sixth">
-        <MainFooter />
-      </section> */}
-      {/* Alternatively, you can use these sections for testing */}
-      {/* <section className="panel red">ONE</section>
-      <section className="panel orange">TWO</section>
-      <section className="panel purple">THREE</section>
-      <section className="panel green">FOUR</section>
-      <header>
-        <a href="https://greensock.com/scrolltrigger">
-          <img
-            className="greensock-icon"
-            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/scroll-trigger-logo-light.svg"
-            width="200"
-            height="64"
-          />
-        </a>
-      </header> */}
+      <div className="mainCont bg-red-500">
+        <section className="panel first bg-red-500">
+          <div id="page"></div>
+        </section>
+      </div>
+      <div className="mainCont bg-pink-600">
+        <section className="panel second bg-pink-600 border"></section>
+      </div>
+      <div className="mainCont bg-blue-600">
+        <section className="panel third bg-blue-600"></section>
+      </div>
+      <div className="mainCont bg-yellow-500">
+        <section className="panel fourth bg-yellow-500"></section>
+      </div>
+      <div className="mainCont bg-cyan-600">
+        <section className="panel fifth bg-cyan-600"></section>
+      </div>
+      <div className="mainCont bg-gray-600">
+        <section className="panel sixth bg-gray-600"></section>
+      </div>
     </>
   );
 }
